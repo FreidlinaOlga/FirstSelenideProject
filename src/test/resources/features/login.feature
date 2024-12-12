@@ -1,5 +1,5 @@
 Feature: Login
-
+@validData
   Scenario: Successful Login
 
     Given User is on HomePage

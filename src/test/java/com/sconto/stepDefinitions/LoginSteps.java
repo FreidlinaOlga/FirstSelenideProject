@@ -17,7 +17,7 @@ public class LoginSteps {
     @And("User enters valid data")
     public void enter_valid_data() {
         login = Selenide.page(LoginPage.class);
-        login.enterData("ando@gmail.com", "4444Lila!");
+        login.enterData();
     }
 
     @And("User clicks on Anmelden button")
@@ -26,22 +26,22 @@ public class LoginSteps {
         login.clickOnAnmelden();
     }
 
-    //    @And("User clicks on User icon")
-//    public void click_on_User_icon() {
-//        home = Selenide.page(HomePage.class);
-//        home.clickOnUserIcon();
-//    }
-//
-//    @Then("User verifies his name")
-//    public void verify_User_name() {
-//        login.verifyName("Anna Doe");
-//
-//    }
+        @And("User clicks on User icon")
+    public void click_on_User_icon() {
+        home = Selenide.page(HomePage.class);
+        home.clickOnStatusLogin();
+    }
+
+    @Then("User verifies his name")
+    public void verify_User_name() {
+        login.verifyName();
+
+    }
     @And("User enters invalid email and correct password")
 
     public void enter_incorrect_data() {
         login = Selenide.page(LoginPage.class);
-        login.enterData("gmail.com", "4444Lila!");
+        login.enterData();
     }
 
     @Then("User verifies login unsuccessful")
